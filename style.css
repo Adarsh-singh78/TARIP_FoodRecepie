@@ -1,0 +1,246 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: #8EC5FC;
+    /* background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+    background-color: rgb(255, 252, 252);
+    /* color: #808080; */
+    color: #4f4e4e;
+    position: relative;
+
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.header{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 8px; */
+    padding: 20px;
+    margin: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    height:140px;
+}
+.header-right{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.header-left{
+    display: flex;
+    justify-content: center;
+    /* position: relative; */
+    border-radius: 30px !important;
+
+}
+
+.search-recepie{ 
+    /* text-align: center; */
+    padding: 15px;
+    /* border: 1px solid rgb(166, 167, 166); */
+    /* background-color: #cdd0d3; */
+    color: #d65108;
+    font-size: 1.8rem;
+    width: 10%
+    
+}
+.search-recepie::placeholder{
+    color: #d65108;
+}
+
+.search-recepie:focus{
+    outline: none;
+    font-weight: 28px;
+}
+.search-btn{
+    padding: 20px;
+    border: none;
+    background: rgb(218, 86, 19);
+    color: white;
+    cursor: pointer;
+}
+.search-btn:hover{
+    background: #8EC5FC;
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transform: translate-y(10px);
+}
+.search-recepie{
+    flex-grow: 1;
+}
+
+@media screen and (max-width:600px) {
+    .header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin:20px;
+        /* gap: 10px; */
+    }
+    form{
+        width: 100%;
+    }
+    form.header-left{
+        width: 80%;
+        margin: 20px;
+    }
+}
+
+.img{
+    position: absolute;
+    right: 0;
+    width: 80%;
+    height: 70vh;
+}
+
+/* menu part */
+.menu-items{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+   flex-direction: row;
+   justify-content:center;
+   gap: 10px;
+   width: 100%;
+}
+.menu-container{
+    border: 1px solid black;
+    font-size: 1.8rem;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: white;
+}
+.menu-container:hover{
+    transform: scale(1.02);
+}
+.menu-img{
+    width: 100%;
+    border-radius: 5px;
+    height: 230px;
+}
+.menu-name{
+    text-align: center;
+    /* color: #808080; */
+    color: #4f4e4e;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+.menu-btn-cont{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+
+}
+.menu-btn{
+    border: none;
+    background-color: hwb(39 11% 7%);
+    margin: 3px;
+    color:  white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+/* Recepie Details */
+.recepie-detail{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #d65108;
+    color: white;
+
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    border-radius: 12px;
+    height: 80%;
+    width: 60%;
+    overflow-y: auto;
+    font-size: 20px;
+    text-align: center;
+
+}
+.recepie-close-btn{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    background: #fff;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.category{
+    background-color: white;
+    color: #d65108;
+    width:fit-content;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 14px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.ingre{
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.fir{
+    margin-top:60px
+}
+.ins{
+    padding: 10px;
+    justify-content: space-around;
+    font-style: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sml-img{
+    border-radius: 50%;
+    margin-top: 30px;
+    height: 400px;
+    width: 400px;
+    /* position: absolute;
+    right: 30px;
+    top: 170px; */
+    overflow: hidden;
+    object-fit: cover
+}
+/* .recepie-detail{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+}
+.recepie-detail-container{
+    border: 5px solid blue;
+    width: fit-content;
+    z-index: 10;
+    overflow-x: hidden;
+    overflow-y:auto;
+} */
+
+/* #d65108
+#b54507 */
